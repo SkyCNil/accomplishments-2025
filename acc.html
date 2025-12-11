@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Professional Accomplishments Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6; /* Slate 100 */
+        }
+        
+        /* Chart Container Strict Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* Max width constraint */
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px; /* Base height */
+            max-height: 500px;
+        }
+
+        /* Responsive adjustments for chart containers */
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+
+        /* Material Design Cards */
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Timeline Styling */
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #e5e7eb;
+            transform: translateX(-50%);
+        }
+        
+        /* Vibrant Palette Classes (Internal Reference) */
+        .bg-primary { background-color: #312E81; } /* Indigo 900 */
+        .text-primary { color: #312E81; }
+        .bg-accent { background-color: #06b6d4; } /* Cyan 500 */
+        .text-accent { color: #06b6d4; }
+        .bg-highlight { background-color: #8b5cf6; } /* Violet 500 */
+        .text-highlight { color: #8b5cf6; }
+
+    </style>
+    <!-- 
+        Palette: Vibrant Tech
+        Primary: Deep Indigo (#312E81)
+        Accent: Electric Cyan (#06b6d4)
+        Highlight: Bright Violet (#8b5cf6)
+        
+        Plan Summary:
+        1. Hero: Strategic Summary
+        2. KPIs: Quantitative Impact (0 Downtime, 100% Accuracy)
+        3. Module Status: POLAR AREA CHART (Completion %)
+        4. Skills: Radar Chart (Tech Proficiency)
+        5. Timeline: Infrastructure Milestones
+        6. Ecosystem: Bubble Chart with MAGNETIC BRIDGE ANIMATION (Integration Leadership) - UPDATED
+        
+        Visualizations chosen based on 'Chart Selection Guide' strictly avoiding SVG and Mermaid.
+    -->
+</head>
+<body class="text-gray-800">
+
+    <!-- Hero Section -->
+    <header class="bg-primary text-white py-12 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">2025 Professional Accomplishments</h1>
+            <p class="text-xl md:text-2xl text-cyan-300 font-light">Akash Pandey</p>
+            <div class="mt-8 flex justify-center space-x-8 text-sm md:text-base opacity-90">
+                <span>&#10004; Zero Production Downtime</span>
+                <span>&#10004; 100% Data Integrity</span>
+                <span>&#10004; Full Lifecycle MES Deployment</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Section 1: Strategic Impact (KPIs) -->
+        <section>
+            <div class="mb-6 border-l-4 border-indigo-900 pl-4">
+                <h2 class="text-2xl font-bold text-primary">Strategic Impact Overview</h2>
+                <p class="text-gray-600 mt-2">
+                    In 2025, the primary focus was ensuring business continuity while driving aggressive digital transformation. By stabilizing critical integrations and automating manual workflows, we achieved quantifiable operational improvements.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- KPI 1 -->
+                <div class="card flex flex-col items-center text-center">
+                    <span class="text-5xl mb-2">&#128640;</span> <!-- Rocket -->
+                    <h3 class="text-4xl font-bold text-primary">0</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Production Downtime</p>
+                    <p class="text-xs text-gray-400 mt-2">During 4 major migrations (Hyper-V, Press 2)</p>
+                </div>
+                <!-- KPI 2 -->
+                <div class="card flex flex-col items-center text-center">
+                    <span class="text-5xl mb-2">&#128202;</span> <!-- Chart Increasing -->
+                    <h3 class="text-4xl font-bold text-accent">&lt;0.8%</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Variance in Stock</p>
+                    <p class="text-xs text-gray-400 mt-2">Achieved a Production Manager's Dream</p>
+                </div>
+                <!-- KPI 3 -->
+                <div class="card flex flex-col items-center text-center">
+                    <span class="text-5xl mb-2">&#9201;</span> <!-- Watch -->
+                    <h3 class="text-4xl font-bold text-highlight">78 Hrs</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Annual Time Saved</p>
+                    <p class="text-xs text-gray-400 mt-2">Via automated API-based ERP inventory adjustments</p>
+                </div>
+                <!-- KPI 4 -->
+                <div class="card flex flex-col items-center text-center">
+                    <span class="text-5xl mb-2">&#128187;</span> <!-- Computer -->
+                    <h3 class="text-4xl font-bold text-primary">100+</h3>
+                    <p class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Servers Migrated to Hyper-V</p>
+                    <p class="text-xs text-gray-400 mt-2">Zero impact on business continuity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: MES Module Readiness (Polar Area Chart) -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-1">
+                <div class="sticky top-4">
+                    <h2 class="text-2xl font-bold text-primary mb-4 border-b-2 border-accent pb-2">VX & CL Plant MES Evolution</h2>
+                    <p class="text-gray-600 mb-4 text-justify">
+                        This Polar Area Chart visualizes the maturity level of key Manufacturing Execution System (MES) modules across both plants, showing the successful progression of each through development, QA, and deployment.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start"><span class="text-accent mr-2">&#10148;</span> CL - Mix Plant MES with GC 2.3.1 Deployment.</li>
+                        <li class="flex items-start"><span class="text-primary mr-2">&#10148;</span> VX - MES(Material Management, QC, Work Order Management)</li>
+                        <li class="flex items-start"><span class="text-highlight mr-2">&#10148;</span> VX-MES(Production Reporting, WIP Label)</li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">&#10148;</span> VX - Drain & Dispose Module</li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">&#10148;</span> VX - FG QC Logic</li>
+                        <li class="flex items-start"><span class="text-gray-500 mr-2">&#10148;</span> CL - Blending</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:col-span-2 card">
+                <h3 class="text-lg font-bold text-gray-800 mb-4">Module Development & Readiness Status</h3>
+                <!-- Chart Container -->
+                <div class="chart-container">
+                    <canvas id="mesStatusChart"></canvas>
+                </div>
+                <p class="text-xs text-gray-400 mt-2 text-center">Figure 1: Comparison of development lifecycle stages across key modules (Polar Area Chart).</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Technical Expertise Radar (Chart.js Radar) -->
+        <section class="bg-white rounded-xl shadow-lg p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="chart-container" style="max-height: 450px;">
+                        <canvas id="skillsRadarChart"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-2xl font-bold text-primary mb-4">Skill Acquisition & Certification</h2>
+                    <p class="text-gray-600 mb-6">
+                        To support the complex IIoT architecture, I aggressively upskilled in 2025, achieving <strong>Expert Level</strong> in MQTT protocols and securing Siemens TIA Portal certifications. This technical depth directly supported the stabilization of MES-SCADA integrations.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-900">
+                            <h4 class="font-bold text-primary">MQTT Expert</h4>
+                            <p class="text-xs text-gray-600">v3.1.1 & v5.0 (Associate to Expert)</p>
+                        </div>
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500">
+                            <h4 class="font-bold text-accent">Siemens TIA</h4>
+                            <p class="text-xs text-gray-600">PLC Programming & Diagnostics</p>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <h4 class="font-bold text-highlight">Advanced SQL</h4>
+                            <p class="text-xs text-gray-600">Complex Stored Procedures & Logic</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-gray-500">
+                            <h4 class="font-bold text-gray-700">Project Mgmt</h4>
+                            <p class="text-xs text-gray-600">Certification Pending Approval</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: IT/OT Infrastructure Timeline (HTML/Tailwind) -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-2xl font-bold text-primary">2025 Infrastructure Milestones</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-2">
+                    A timeline of critical upgrades and migrations executed with zero production downtime, ensuring a robust foundation for operations.
+                </p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="hidden md:block timeline-line"></div>
+
+                <!-- Timeline Item 1 (Right-Aligned Card) -->
+                <div class="relative z-10 mb-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="text-right md:pr-8 mb-2 md:mb-0">
+                        <h3 class="text-lg font-bold text-primary">April 2025</h3>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Legacy Upgrade</span>
+                    </div>
+                    <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm">1</div>
+                    <div class="card md:ml-8">
+                        <h4 class="font-bold text-gray-800">CL Press 2 Upgrade</h4>
+                        <p class="text-sm text-gray-600 mt-1">Led coordination with RTS, migrated apps to Citrix, and stabilized post-upgrade environment.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 (Left-Aligned Card) -->
+                <div class="relative z-10 mb-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="card md:mr-8 order-2 md:order-1">
+                        <h4 class="font-bold text-gray-800">VX WMS-MES Integration</h4>
+                        <p class="text-sm text-gray-600 mt-1">Enabled real-time inventory sync and work order-based picking using advanced SQL procedures.</p>
+                    </div>
+                    <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-accent text-white font-bold text-sm order-1">2</div>
+                    <div class="text-left md:pl-8 mb-2 md:mb-0 order-1 md:order-2">
+                        <h3 class="text-lg font-bold text-primary">May 2025</h3>
+                        <span class="bg-cyan-100 text-cyan-800 text-xs font-semibold px-2.5 py-0.5 rounded">Integration</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 (Right-Aligned Card) -->
+                <div class="relative z-10 mb-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="text-right md:pr-8 mb-2 md:mb-0">
+                        <h3 class="text-lg font-bold text-primary">May & Sept 2025</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Virtualization</span>
+                    </div>
+                    <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-highlight text-white font-bold text-sm">3</div>
+                    <div class="card md:ml-8">
+                        <h4 class="font-bold text-gray-800">VX Hyper-V Migrations</h4>
+                        <p class="text-sm text-gray-600 mt-1">Completed IT servers (May) and OT servers (Sept) with OEM alignment and license mitigation.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 (Left-Aligned Card) -->
+                <div class="relative z-10 mb-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="card md:mr-8 order-2 md:order-1">
+                        <h4 class="font-bold text-gray-800">CL IT Hyper-V Migration</h4>
+                        <p class="text-sm text-gray-600 mt-1">Migrated 28 servers with <strong>zero production downtime</strong>, ensuring 100% business continuity.</p>
+                    </div>
+                    <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm order-1">4</div>
+                    <div class="text-left md:pl-8 mb-2 md:mb-0 order-1 md:order-2">
+                        <h3 class="text-lg font-bold text-primary">October 2025</h3>
+                        <span class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Infrastructure</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 (Right-Aligned Card) -->
+                <div class="relative z-10 mb-8 md:grid md:grid-cols-2 md:gap-8 items-center">
+                    <div class="text-right md:pr-8 mb-2 md:mb-0">
+                        <h3 class="text-lg font-bold text-primary">November & December 2025</h3>
+                        <span class="bg-highlight text-white text-xs font-semibold px-2.5 py-0.5 rounded">IT Security</span>
+                    </div>
+                    <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center w-8 h-8 rounded-full bg-highlight text-white font-bold text-sm">5</div>
+                    <div class="card md:ml-8">
+                        <h4 class="font-bold text-gray-800">VP JANUS Phase 1</h4>
+                        <p class="text-sm text-gray-600 mt-1">Migrated 22 OT Devices and Servers with <strong>zero unplanned production downtime</strong>, ensuring 100% business continuity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Stakeholder Bridge & Ecosystem (Chart.js Scatter/Bubble) -->
+        <section class="bg-indigo-900 rounded-xl shadow-2xl p-8 text-white">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-white mb-4">The Central Connector</h2>
+                    <p class="text-indigo-200 mb-6">
+                        A key achievement in 2025 was acting as the pivotal bridge between disparate operational silos. By translating business requirements into technical logic for OT and IT, I facilitated efficient issue resolution and alignment.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-cyan-500 rounded-full mr-3 text-xs font-bold">1</span>
+                            <span>Managed to Migrate 22 OT devices behind firewall collaborating across Security, Network, and Field teams (JANUS).</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-purple-500 rounded-full mr-3 text-xs font-bold">2</span>
+                            <span>Unblocked critical SCADA installs when OEM support failed.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-8 h-8 flex items-center justify-center bg-white text-indigo-900 rounded-full mr-3 text-xs font-bold">3</span>
+                            <span>Integrated Business, QC, and Operations logic into unified MES workflows.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-indigo-800 rounded-lg p-4">
+                    <h3 class="text-center font-bold mb-2">Integration Ecosystem</h3>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="ecosystemChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 text-sm pt-8 pb-4">
+            <p>&copy; 2025 Professional Accomplishments. Akash Pandey.</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Utility: Label Wrapping (Mandatory 16-char logic) ---
+        function wrapLabel(label, maxChar = 16) {
+            if (label.length <= maxChar) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxChar) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- Common Tooltip Config (Mandatory) ---
+        const commonTooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- Chart 1: MES Module Readiness (POLAR AREA CHART) ---
+        const ctx1 = document.getElementById('mesStatusChart').getContext('2d');
+        // Note: Chart labels updated to reflect the detailed legend text in HTML
+        const labels1 = ['CL - Mix Plant MES', 'VX - MES(Material Loading, QC, WO Management)', 'VX - MES(Production Reporting, WIP Label)', 'Drain & Dispose', 'FG QC Logic', 'Blending (CL)'];
+        
+        new Chart(ctx1, {
+            type: 'polarArea',
+            data: {
+                labels: labels1,
+                datasets: [{
+                    label: 'Readiness / Stability %',
+                    data: [100, 100, 90, 70, 60, 40],
+                    backgroundColor: [
+                        'rgba(6, 182, 212, 0.8)',   // Cyan (Accent)
+                        'rgba(50, 200, 220, 0.8)',  // Lighter Cyan
+                        'rgba(49, 46, 129, 0.8)',   // Indigo (Primary)
+                        'rgba(139, 92, 246, 0.8)',  // Violet (Highlight)
+                        'rgba(167, 139, 250, 0.8)', // Lighter Violet
+                        'rgba(156, 163, 175, 0.8)'  // Gray (URS Phase)
+                    ],
+                    borderColor: 'white',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            font: { size: 12 },
+                            color: '#374151',
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: commonTooltipConfig
+                },
+                scales: {
+                    r: {
+                        grid: { color: 'rgba(0,0,0,0.1)' },
+                        angleLines: { color: 'rgba(0,0,0,0.1)' },
+                        suggestedMin: 0,
+                        suggestedMax: 100,
+                        ticks: { display: false } // Hide ticks for cleaner look
+                    }
+                }
+            }
+        });
+
+        // --- Chart 2: Skills Radar (Radar) ---
+        const ctx2 = document.getElementById('skillsRadarChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'radar',
+            data: {
+                labels: ['MQTT Protocols', 'MES Configuration', 'SQL/Database', 'PLC/TIA Portal', 'Project Mgmt', 'System Integration'],
+                datasets: [{
+                    label: 'Proficiency Level (0-100)',
+                    data: [95, 90, 85, 75, 50, 95], // 95=Expert, 50=Pending Cert
+                    backgroundColor: 'rgba(6, 182, 212, 0.2)', // Cyan transparent
+                    borderColor: '#06b6d4',
+                    pointBackgroundColor: '#312E81',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#06b6d4'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(0,0,0,0.1)' },
+                        grid: { color: 'rgba(0,0,0,0.1)' },
+                        pointLabels: {
+                            font: { size: 12, weight: 'bold' },
+                            color: '#374151'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                },
+                plugins: {
+                    tooltip: commonTooltipConfig,
+                    legend: { display: false }
+                }
+            }
+        });
+
+        // --- Chart 3: Ecosystem (Bubble/Scatter acting as Nodes) with Magnetic Bridge ---
+        const ctx3 = document.getElementById('ecosystemChart').getContext('2d');
+        
+        const ecosystemChart = new Chart(ctx3, {
+            type: 'bubble',
+            data: {
+                datasets: [
+                    {
+                        label: 'Me (The Bridge)',
+                        data: [{x: 0, y: 0, r: 25}],
+                        backgroundColor: '#F59E0B', // Amber
+                    },
+                    {
+                        label: 'Teams',
+                        data: [
+                            {x: -10, y: 10, r: 15}, // Business
+                            {x: 10, y: 10, r: 15},  // IT/Security
+                            {x: -10, y: -10, r: 15}, // OT/Ops
+                            {x: 10, y: -10, r: 15}   // OEMs/Vendors
+                        ],
+                        backgroundColor: '#06b6d4', // Cyan
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: true, position: 'bottom', labels: { color: 'white' } },
+                    tooltip: {
+                        callbacks: {
+                            title: () => 'Stakeholder Node',
+                            label: (context) => {
+                                const labels = {
+                                    '0,0': 'Me (Bridge)',
+                                    '-10,10': 'Business',
+                                    '10,10': 'IT/Security',
+                                    '-10,-10': 'OT/Ops',
+                                    '10,-10': 'OEMs'
+                                };
+                                const key = `${context.raw.x.toFixed(0)},${context.raw.y.toFixed(0)}`;
+                                return labels[key] || '';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { display: false, min: -20, max: 20 },
+                    y: { display: false, min: -20, max: 20 }
+                },
+                layout: { padding: 10 }
+            }
+        });
+
+        // --- Animation: Magnetic Bridge (Attraction/Repulsion) ---
+        const magneticBridgeAnimation = (chart) => {
+            const teamDataset = chart.data.datasets[1].data; // Surrounding nodes
+            const originalPositions = [
+                {x: -10, y: 10},
+                {x: 10, y: 10},
+                {x: -10, y: -10},
+                {x: 10, y: -10}
+            ];
+            
+            const animationSteps = 30; // Steps for one phase (attraction or repulsion)
+            const attractionFactor = 0.4; // Nodes move 60% of the way toward the center (1.0 = center, 0.0 = static)
+            
+            let step = 0;
+            let attracting = true;
+
+            setInterval(() => {
+                // Determine current phase and reset
+                if (attracting) {
+                    step++;
+                    if (step > animationSteps) {
+                        attracting = false; // Switch to repulsion
+                        step = 0; // Reset step counter
+                        return; // Brief pause before starting repulsion
+                    }
+                } else {
+                    step++;
+                    if (step > animationSteps) {
+                        attracting = true; // Switch back to attraction
+                        step = 0; // Reset step counter
+                        return; // Brief pause before starting attraction
+                    }
+                }
+
+                // The current interpolation factor (t goes from 0 to 1 over the steps)
+                const currentT = step / animationSteps;
+                
+                // Calculate current coordinates for each node
+                for (let i = 0; i < teamDataset.length; i++) {
+                    const originalX = originalPositions[i].x;
+                    const originalY = originalPositions[i].y;
+
+                    // Calculate the target end point for the attraction phase (40% of original distance)
+                    const targetX = originalX * attractionFactor; 
+                    const targetY = originalY * attractionFactor;
+                    
+                    if (attracting) {
+                        // Attraction: Move from Original (e.g., -10) towards Target (e.g., -4)
+                        // Linear interpolation: New = Start + (End - Start) * t
+                        teamDataset[i].x = originalX + (targetX - originalX) * currentT;
+                        teamDataset[i].y = originalY + (targetY - originalY) * currentT;
+                    } else {
+                        // Repulsion: Move from Target (e.g., -4) back towards Original (e.g., -10)
+                        // Linear interpolation: New = Start (Target) + (End (Original) - Start (Target)) * t
+                        teamDataset[i].x = targetX + (originalX - targetX) * currentT;
+                        teamDataset[i].y = targetY + (originalY - targetY) * currentT;
+                    }
+                }
+
+                chart.update('none'); // Update the chart without redrawing everything
+            }, 30); // Interval set to 30ms for smooth movement
+        };
+
+        // Start the magnetic bridge animation for the ecosystem chart
+        magneticBridgeAnimation(ecosystemChart);
+    </script>
+</body>
+</html>
