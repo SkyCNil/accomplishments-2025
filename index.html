@@ -457,55 +457,73 @@
         const ctx3 = document.getElementById('ecosystemChart').getContext('2d');
         
         const ecosystemChart = new Chart(ctx3, {
-            type: 'bubble',
-            data: {
-                datasets: [
-                    {
-                        label: 'Me (The Bridge)',
-                        data: [{x: 0, y: 0, r: 25}],
-                        backgroundColor: '#F59E0B', // Amber
-                    },
-                    {
-                        label: 'Teams',
-                        data: [
-                            {x: -10, y: 10, r: 15}, // Business
-                            {x: 10, y: 10, r: 15},  // IT/Security
-                            {x: -10, y: -10, r: 15}, // OT/Ops
-                            {x: 10, y: -10, r: 15}   // OEMs/Vendors
-                        ],
-                        backgroundColor: '#06b6d4', // Cyan
-                    }
-                ]
+    type: 'bubble',
+    data: {
+        datasets: [
+            {
+                label: 'Me (The Bridge)',
+                data: [{ x: 0, y: 0, r: 25 }],
+                backgroundColor: '#F59E0B'
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: true, position: 'bottom', labels: { color: 'white' } },
-                    tooltip: {
-                        callbacks: {
-                            title: () => 'Stakeholder Node',
-                            label: (context) => {
-                                const labels = {
-                                    '0,0': 'Me (Bridge)',
-                                    '-10,10': 'Business',
-                                    '10,10': 'IT/Security',
-                                    '-10,-10': 'OT/Ops',
-                                    '10,-10': 'OEMs'
-                                };
-                                const key = `${context.raw.x.toFixed(0)},${context.raw.y.toFixed(0)}`;
-                                return labels[key] || '';
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    x: { display: false, min: -20, max: 20 },
-                    y: { display: false, min: -20, max: 20 }
-                },
-                layout: { padding: 10 }
+            {
+                label: 'Teams',
+                data: [
+                    { x: -10, y: 10, r: 15 },
+                    { x: 10, y: 10, r: 15 },
+                    { x: -10, y: -10, r: 15 },
+                    { x: 10, y: -10, r: 15 }
+                ],
+                backgroundColor: '#06b6d4',
+                pointHitRadius: 25,
+                pointHoverRadius: 18
             }
-        });
+        ]
+    },
+
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: { color: 'white' }
+            },
+            tooltip: {
+                callbacks: {
+                    title: () => 'Stakeholder Node'
+                }
+            }
+        },
+
+        scales: {
+            x: { display: false, min: -20, max: 20 },
+            y: { display: false, min: -20, max: 20 }
+        }
+    },
+
+    plugins: [
+        {
+            id: 'pointLabels',
+            afterDatasetsDraw(chart) {
+                const { ctx } = chart;
+                const labels = ['Business', 'IT/Security', 'OT/Ops', 'OEMs'];
+
+                ctx.save();
+                ctx.fillStyle = 'white';
+                ctx.font = '12px Roboto';
+
+                chart.getDatasetMeta(1).data.forEach((point, i) => {
+                    ctx.fillText(labels[i], point.x + 10, point.y - 10);
+                });
+
+                ctx.restore();
+            }
+        }
+    ]
+});
+
 
         // --- Animation: Magnetic Bridge (Attraction/Repulsion) ---
         const magneticBridgeAnimation = (chart) => {
@@ -575,6 +593,7 @@
     </script>
 </body>
 </html>
+
 
 
 
